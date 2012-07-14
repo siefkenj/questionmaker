@@ -1,0 +1,219 @@
+<html>
+<head>
+	<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+        <script type="text/javascript" src="jquery/js/jquery-ui-1.8.18.custom.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="jquery/css/redmond/jquery-ui-1.8.18.custom.css" 
+/>	
+	<!-- MathJax -->
+	<script type="text/x-mathjax-config">
+	  MathJax.Hub.Config({
+	    skipStartupTypeset: true,
+	    tex2jax: {
+	      inlineMath: [["$","$"],["\\(","\\)"]]
+	    }
+	  });
+	</script>
+	<script type="text/javascript"
+	   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	</script>
+
+	<!-- CodeMirror -->
+	<script src="codemirror/lib/codemirror.js"></script>
+	<link rel="stylesheet" href="codemirror/lib/codemirror.css">
+	<script src="codemirror/mode/stex/stex.js"></script>
+
+	<script type="text/javascript" src="js/raphael.js"></script>
+	<script type="text/javascript" src="js/interface.js"></script>
+
+	<style type="text/css">
+		.clearfix:after {
+			content: ".";
+			display: block;
+			clear: both;
+			visibility: hidden;
+			line-height: 0;
+			height: 0;
+		}
+		 
+		.clearfix {
+			display: inline-block;
+		}
+		 
+		html[xmlns] .clearfix {
+			display: block;
+		}
+		 
+		* html .clearfix {
+			height: 1%;
+		}
+
+		.beamerFrame {
+			width: 40em;
+			height: 20em;
+		}
+		
+		#question-title, #question-body {
+			display: block;
+			width: 100%;
+			padding-left: 2em;
+		}
+		.question-option {
+			padding-left: 2em;
+		}
+		.watched-input {
+			width: 100%;
+		}
+
+		.question-option-input {
+			display: block;
+		}
+
+		.question-option-input-container {
+			display: inline-block;
+			width: 100%;
+		}
+		.question-option-label {
+			display: inline-block;
+			margin-left: -2em;
+			width: 2em;
+		}
+		
+		#question-container {
+			float: left;
+			width: 50%;
+		}
+		
+		#preview-area {
+			float: right;
+			width: 50%;
+		}
+
+		/*
+	
+		#math-preview .title {
+			display: block;
+			text-align: center;
+			font-family: sans;
+			font-size: 1.3em;
+		}
+		#math-preview .body {
+			display: block;
+			margin: .2em;
+			margin-left: 1em;
+		}
+		#math-preview .question-option {
+			display: inline;
+			float: left;
+			width: 49%;
+		}
+		#math-preview .questions {
+			display: block;
+			margin-left: 10%;
+		} */
+		#math-preview {
+			border: 1px solid black;
+		}
+		.column {
+			width: 100%;
+		}
+
+				#layout1 span {
+			background: #fcf;
+		}
+		.layout1 .title {
+			display: block;
+			text-align: center;
+			font-family: sans;
+			font-size: 1.3em;
+		}
+
+		/* various styles to arrange the layout of the slide */
+		.layout1 .body {
+			display: block;
+		}
+		.layout1 .question-option {
+			display: inline;
+			float: left;
+			width: 50%;
+		}
+		.layout1 .questions {
+			display: block;
+			margin-top: .2em;
+		}
+		.layout1 .framecontent {
+			padding: 2em;
+		}
+		
+		.layout2 span {
+			background: .fcf;
+		}
+		.layout2 .title {
+			display: block;
+			text-align: center;
+			font-family: sans;
+			font-size: 1.3em;
+		}
+		.layout2 .body {
+			display: block;
+		}
+		.layout2 .question-option {
+			display: block;
+		}
+		.layout2 .questions {
+			display: block;
+			margin-top: .2em;
+		}
+		.layout2 .framecontent {
+			padding: 2em;
+		}
+		
+		
+		.layout3 span {
+			background: .fcf;
+		}
+		.layout3 .title {
+			display: block;
+			text-align: center;
+			font-family: sans;
+			font-size: 1.3em;
+		}
+		.layout3 .body {
+			display: block;
+			float: left;
+			width: 50%;
+		}
+		.layout3 .question-option {
+			display: block;
+		}
+		.layout3 .questions {
+			display: block;
+			float: right;
+			width: 50%;
+		}
+		.layout3 .framecontent {
+			padding: 2em;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div id="question-container">
+		<input type='text' id='question-title' class='watched-input' />
+		<textarea rows='10' cols='40' id='question-body' class='watched-input'></textarea>
+	</div>
+	<span class='button' id='preview-question'>Preview Question</span>
+	<div id="preview-area">
+		<div class="clearfix column">
+		<div id="math-preview" class='beamerFrame layout2'>
+			<span class='title'></span>
+			<div class='framecontent'>
+				<span class='body'></span>
+				<span class='questions'></span>
+			</div>
+		</div>
+		</div>
+		<textarea rows='10' cols='40' id='latex-preview'></textarea>
+	</div>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<html>
+<head>
+	<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+	<style type="text/css">
+		.clearfix:after {
+			content: ".";
+			display: block;
+			clear: both;
+			visibility: hidden;
+			line-height: 0;
+			height: 0;
+		}
+		 
+		.clearfix {
+			display: inline-block;
+		}
+		 
+		html[xmlns] .clearfix {
+			display: block;
+		}
+		 
+		* html .clearfix {
+			height: 1%;
+		}
+		
+		.beamerFrame {
+			display: inline-block;
+			margin: 10px;
+			width: 500px;
+			height: 400px;
+			background: #cfc;
+		}
+
+		.option-label {
+			display: inline-block;
+			width: 2em;
+			margin-left:-2em;
+		}
+		.option-text {
+			width: 100%;
+		}
+		.question-option {
+			padding-left: 2em;
+		}
+
+		#layout1 span {
+			background: #fcf;
+		}
+		#layout1 .title {
+			display: block;
+			text-align: center;
+			font-family: sans;
+			font-size: 1.3em;
+		}
+		#layout1 .body {
+			display: block;
+		}
+		#layout1 .question-option {
+			display: inline;
+			float: left;
+			width: 50%;
+		}
+		#layout1 .questions {
+			display: block;
+			margin-top: .2em;
+		}
+		#layout1 .framecontent {
+			padding: 2em;
+		}
+		
+		#layout2 span {
+			background: #fcf;
+		}
+		#layout2 .title {
+			display: block;
+			text-align: center;
+			font-family: sans;
+			font-size: 1.3em;
+		}
+		#layout2 .body {
+			display: block;
+		}
+		#layout2 .question-option {
+			display: block;
+		}
+		#layout2 .questions {
+			display: block;
+			margin-top: .2em;
+		}
+		#layout2 .framecontent {
+			padding: 2em;
+		}
+		
+		
+		#layout3 span {
+			background: #fcf;
+		}
+		#layout3 .title {
+			display: block;
+			text-align: center;
+			font-family: sans;
+			font-size: 1.3em;
+		}
+		#layout3 .body {
+			display: block;
+			float: left;
+			width: 50%;
+		}
+		#layout3 .question-option {
+			display: block;
+		}
+		#layout3 .questions {
+			display: block;
+			float: right;
+			width: 50%;
+		}
+		#layout3 .framecontent {
+			padding: 2em;
+		}
+		
+
+	</style>
+</head>
+<body>
+	<div class="clearfix">
+	<div id="layout1" class="beamerFrame">
+		<span class="title">3.5 Worldly weight</span>
+		<div class="framecontent">
+		<span class="body">This is some super-cool body text, and maybe it has a really long sentance.This is some super-cool body text, and maybe it has a really long sentance.This is some super-cool body text, and maybe it has a really long sentance.</span>
+		<span class="questions">
+			<span class="question-option">(A) <span class="option-text option-0"></span>what a swell option</span>
+			<span class="question-option">(B)         <span class="option-text option-1"></span>and a nother one</span>
+			<span class="question-option">(C)         <span class="option-text option-2"></span>to think, is this real?</span>
+			<span class="question-option">(D)         <span class="option-text option-3"></span>swell, dan!</span>
+		</span>
+		</div>
+	</div>
+	</div>
+	
+	<div class="clearfix">
+	<div id="layout2" class="beamerFrame clearfix">
+		<span class="title">3.5 Worldly weight</span>
+		<div class="framecontent">
+		<span class="body">This is some super-cool body text, and maybe it has a really long sentance.This is some super-cool body text, and maybe it has a really long sentance.This is some super-cool body text, and maybe it has a really long sentance.</span>
+		<span class="questions">
+			<span class="question-option"><span class='option-label'>(A)</span><span class="option-text option-0">what a swell option</span></span>
+			<span class="question-option"><span class='option-label'>(B)</span><span class="option-text option-0">what a swell option</span></span>
+			<span class="question-option"><span class='option-label'>(C)</span><span class="option-text option-0">what a swell option</span></span>
+			<span class="question-option"><span class='option-label'>(D)</span><span class="option-text option-0">what a swell option</span></span>
+		</span>
+	</div>
+	</div>
+
+	<div class="clearfix">
+	<div id="layout3" class="beamerFrame clearfix">
+		<span class="title">3.5 Worldly weight</span>
+		<div class="framecontent">
+		<span class="body">This is some super-cool body text, and maybe it has a really long sentance.This is some super-cool body text, and maybe it has a really long sentance.This is some super-cool body text, and maybe it has a really long sentance.</span>
+		<span class="questions">
+			<span class="question-option">(A) <span class="option-text option-0"></span>what a swell option</span>
+			<span class="question-option">(B)         <span class="option-text option-1"></span>and a nother one</span>
+			<span class="question-option">(C)         <span class="option-text option-2"></span>to think, is this real?</span>
+			<span class="question-option">(D)         <span class="option-text option-3"></span>swell, dan!</span>
+		</span>
+		</div>
+	</div>
+	</div>
+</body>
+</html>
