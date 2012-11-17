@@ -1,6 +1,6 @@
 <html>
 <head>
-	<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+	<script type="text/javascript" src="jquery/js/jquery-1.7.2.js"></script>
         <script type="text/javascript" src="jquery/js/jquery-ui-1.8.18.custom.min.js"></script>
         <link rel="stylesheet" type="text/css" href="jquery/css/redmond/jquery-ui-1.8.18.custom.css" 
 />	
@@ -10,6 +10,14 @@
 	    skipStartupTypeset: true,
 	    tex2jax: {
 	      inlineMath: [["$","$"],["\\(","\\)"]]
+	    },
+	    TeX: {
+	    	Macros: {
+			d: '{\\mathrm d}',
+			R: '{\\mathbb R}',
+			Z: '{\\mathbb Z}',
+			C: '{\\mathbb C}'
+		}
 	    }
 	  });
 	</script>
@@ -55,7 +63,6 @@
 		#question-title, #question-body {
 			display: block;
 			width: 100%;
-			padding-left: 2em;
 		}
 		.question-option {
 			padding-left: 2em;
@@ -112,6 +119,14 @@
 		} */
 		#math-preview {
 			border: 1px solid black;
+			font-size: 1em;
+		}
+		.math-preview-thumbnail {
+			border: 1px solid black;
+			font-size: .4em !important;
+		}
+		.math-preview-thumbnail:hover {
+			border: 1px solid red;
 		}
 		.column {
 			width: 100%;
@@ -133,6 +148,8 @@
 		}
 		.layout1 .question-option {
 			display: inline;
+			box-sizing: border-box; 	/* make sure padding is included in the size and not just the content area! */
+			-moz-box-sizing: border-box;
 			float: left;
 			width: 50%;
 		}
@@ -157,6 +174,8 @@
 			display: block;
 		}
 		.layout2 .question-option {
+			box-sizing: border-box; 	/* make sure padding is included in the size and not just the content area! */
+			-moz-box-sizing: border-box;
 			display: block;
 		}
 		.layout2 .questions {
@@ -183,6 +202,8 @@
 			width: 50%;
 		}
 		.layout3 .question-option {
+			box-sizing: border-box; 	/* make sure padding is included in the size and not just the content area! */
+			-moz-box-sizing: border-box;
 			display: block;
 		}
 		.layout3 .questions {
@@ -198,6 +219,11 @@
 	</style>
 </head>
 <body>
+	<div id="option-bar">
+		<div class="button" id="set-layout1">Layout 1</div>
+		<div class="button" id="set-layout2">Layout 2</div>
+		<div class="button" id="set-layout3">Layout 3</div>
+	</div>
 	<div id="question-container">
 		<input type='text' id='question-title' class='watched-input' />
 		<textarea rows='10' cols='40' id='question-body' class='watched-input'></textarea>
@@ -214,6 +240,10 @@
 		</div>
 		</div>
 		<textarea rows='10' cols='40' id='latex-preview'></textarea>
+	</div>
+	<div>
+	<h3 class='button' id='save-question'>Save Question</h3>
+	<div id='saved-questions'></div>
 	</div>
 </body>
 </html>
